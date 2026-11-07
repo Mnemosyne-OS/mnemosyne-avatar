@@ -11,6 +11,7 @@
  *   trueColor, arcs    passed to the particle scene
  *   overlays, subtitles motion design above the avatar (runtime/overlays.js)
  *   look               where a face looks, so its eyes do not stare (runtime/gaze.js)
+ *   still              [{ at, end, shape? }]: the face is frozen (no blink, gaze or breath), only the mouth speaks
  *
  * Reads film.json (and voice.json when present) from the film folder; the
  * engine is `Face`, bundled from the avatar package's source.
@@ -37,6 +38,9 @@
   const ALLOWED = new Set(Array.isArray(film.allowMoves) ? film.allowMoves : DEFAULT_ALLOWED);
   const BLOCKED = new Set(Array.isArray(film.blockMoves) ? film.blockMoves : ['yawn', 'yawnLong', 'bored', 'daydream']);
   const GESTURES = film.gestures === true;
+  // A frozen face: the animator's reduced-motion switch, so the mouth still follows the voice.
+  const STILL = Array.isArray(film.still) ? film.still : [];
+  const stillAt = (shape, t) => STILL.some((w) => t >= w.at && t < w.end && (!w.shape || w.shape === shape));
 
   const host = document.getElementById('faces');
   const overlays = window.FilmOverlays ? window.FilmOverlays.create(document.getElementById('stage'), film, W, H) : null;
@@ -126,7 +130,8 @@
     // again at every cut reads as a dead reload.
     const gatherAt = shotStart(shape);
     const arrivesFormed = shotAt(t)?.shape === shape && shotAt(t)?.formed === true;
-    layer.bornAt = shape === 'brain' ? 0 : (!arrivesFormed && t < gatherAt + FORM + 0.05 ? gatherAt : Math.max(0, t - FORM));
+    // Formed is formed even on the film's first frame: born FORM ago, so a cold open on a face shows it whole.
+    layer.bornAt = shape === 'brain' ? 0 : arrivesFormed ? t - FORM : (t < gatherAt + FORM + 0.05 ? gatherAt : Math.max(0, t - FORM));
     layer.faceT = t;
     layer.nextMove = 0;
     while (layer.nextMove < moves.length && moves[layer.nextMove].at < t - 1e-6) layer.nextMove++;
@@ -206,12 +211,13 @@
       }
       const v = speaking ? voiceAt(layer.faceT) : { level: 0, bins: null };
       const l = speaking ? lineAt(layer.faceT) : null;
-      const aim = layer.lookKeys.length ? window.FilmGaze.lookAim(layer.lookKeys, layer.faceT) : null;
+      const still = stillAt(layer.shape, layer.faceT);
+      const aim = !still && layer.lookKeys.length ? window.FilmGaze.lookAim(layer.lookKeys, layer.faceT) : null;
       layer.lastFrame = layer.animator.step(dt, {
         voice: v.level,
         spectrum: v.bins,
         lookGoal: aim ?? { x: 0, y: 0 },
-        motion: true,
+        motion: !still,
         gestures: GESTURES,
         gaze: true,
         sentence: l ? { text: l.text, at: l.at } : null,

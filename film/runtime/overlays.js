@@ -12,6 +12,8 @@
  *   mic     { text? }                      a microphone whose bars follow her voice
  *   choice  { options: [a, b], pickAt? }   two buttons; at pickAt the first turns green
  * `y` is the vertical centre as a fraction of the height (default by kind).
+ * `moveTo: { y, at, dur? }` slides it to another height from `at` (0.7 s by default).
+ * A title's `note` is one more line under it, shown from `noteAt` (its start by default).
  * film.json `subtitles: true` adds the spoken line at the bottom.
  *
  * Style: a HUD of night glass, cyan light,
@@ -36,6 +38,7 @@
   #ov .title { padding: 34px 56px; text-align: center; white-space: nowrap; }
   #ov .title .t { font-size: 88px; font-weight: 700; letter-spacing: -.01em; }
   #ov .title .s { font-size: 30px; margin-top: 10px; }
+  #ov .title .n { font-size: 30px; margin-top: 18px; color: #5fe3ff; text-shadow: 0 0 18px rgba(95,227,255,.6); }
   #ov .badge { padding: 20px 46px; font-size: 54px; font-weight: 800; letter-spacing: .22em; color: #5fe3ff; text-shadow: 0 0 24px rgba(95,227,255,.7); }
   #ov .engine { width: 640px; padding: 34px 40px; display: flex; align-items: center; gap: 34px; }
   #ov .engine svg { flex: none; }
@@ -63,7 +66,7 @@
   function build(o) {
     const el = document.createElement('div');
     el.className = `o hud ${o.kind}`;
-    if (o.kind === 'title') el.innerHTML = `<div class="t">${esc(o.text)}</div>${o.sub ? `<div class="s lab">${esc(o.sub)}</div>` : ''}`;
+    if (o.kind === 'title') el.innerHTML = `<div class="t">${esc(o.text)}</div>${o.sub ? `<div class="s lab">${esc(o.sub)}</div>` : ''}${o.note ? `<div class="n lab">${esc(o.note)}</div>` : ''}`;
     else if (o.kind === 'badge') el.textContent = o.text ?? '';
     else if (o.kind === 'engine') {
       el.innerHTML = `<svg width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="62" stroke="rgba(95,227,255,.18)" stroke-width="8" fill="none"/>`
@@ -91,7 +94,8 @@
         const el = build(o);
         el.style.opacity = '0';
         root.appendChild(el);
-        return { o, el, y: (o.y ?? DEFAULT_Y[o.kind]) * H };
+        const to = o.moveTo && typeof o.moveTo.y === 'number' ? { y: o.moveTo.y * H, at: o.moveTo.at ?? o.at, dur: o.moveTo.dur ?? 0.7 } : null;
+        return { o, el, y: (o.y ?? DEFAULT_Y[o.kind]) * H, to };
       });
       const sub = film.subtitles ? Object.assign(document.createElement('div'), { className: 'sub' }) : null;
       if (sub) {
@@ -105,7 +109,8 @@
 
     /** Draws every overlay for time t; `level` is the voice loudness (0..1) for the mic. */
     draw(state, t, level) {
-      for (const { o, el, y } of state.items) {
+      for (const { o, el, y: y0, to } of state.items) {
+        const y = to ? y0 + (to.y - y0) * smooth(ramp(t, to.at, to.dur)) : y0;
         const inP = ramp(t, o.at, 0.45);
         const outP = ramp(t, o.end - 0.35, 0.35);
         const vis = inP * (1 - smooth(outP));
@@ -117,6 +122,9 @@
         el.style.top = `${y}px`;
         el.style.transform = `translate(-50%, calc(-50% + ${lift.toFixed(1)}px)) scale(${scale.toFixed(4)})`;
         const local = t - o.at;
+        if (o.kind === 'title' && o.note) {
+          el.querySelector('.n').style.opacity = smooth(ramp(t, o.noteAt ?? o.at, 0.45)).toFixed(3);
+        }
         if (o.kind === 'engine') {
           const ring = clamp(local / 1.6, 0, 1);
           el.querySelector('.ring').setAttribute('stroke-dashoffset', String(390 * (1 - smooth(ring))));

@@ -64,6 +64,8 @@ A film that needs more than the standard timeline (several faces, cards, picture
 | `gestures` | `false` by default: no idle yawn or laugh between moves |
 | `wake` | `false`: a face forms with its eyes already open (no waking). By default she wakes once formed, which takes ~2.1 s before her eyes are open |
 | `allowMoves`, `blockMoves` | Override which moves a film may express |
+| `overlays[].moveTo` | `{ y, at, dur? }`: the card slides to height `y` from `at` (0.7 s by default). A `title` may add `note`, one more line, shown from `noteAt` |
+| `still[]` | `{ at, end, shape? }`: the face is frozen inside the window: no blink, no gaze, no breath, only the mouth follows the voice. The uncanny valley, on purpose |
 | `look[]` | `{ at, x, y?, sway?, shape? }`: where the face looks from `at` on (-1..1), reached in 0.4 s, with a small drift (`sway`, 1 by default). Without it the animator holds the eyes at the centre while she speaks. Check the direction on the played file, not on a still |
 | `score` | `{ bpm?, heart?, notes? }` for the `score` command: tempo (102), heartbeat per minute (66, 0 = none), the pluck's notes in Hz |
 | `ending` | `{ kind: "tvOff", at }`: at `at` the picture folds into a line, holds, fades to black, the sound fades out; needs 0.95 s before `total`. The `score` bed stops there and plays a falling tone. `{ kind: "implode", at, dur? }`: from `at` every point is pulled into one small ball of light that burns brighter and goes out in `dur` seconds (1.8 by default), drawn by the particle scene itself; the bed stops at `at` and plays a rising tone |
