@@ -1,0 +1,56 @@
+{
+  "name": "@mnemosyne_os/avatar",
+  "version": "0.1.0",
+  "private": true,
+  "_private": "Kept private until the npm publication (doc 203 lot 3) is decided: a private package cannot be published by mistake. Remove this flag, and add publishConfig.access=public, on that day only.",
+  "description": "Mnemosyne Avatar: a face made of particles that looks at you, listens, speaks and reacts. The particle scene, the faces, the gaze and its micro-reactions, the robots and the particle orb, on three.js.",
+  "keywords": [
+    "avatar",
+    "particles",
+    "three",
+    "webgl",
+    "face",
+    "gaze",
+    "lip-sync",
+    "mnemosyne"
+  ],
+  "license": "BUSL-1.1",
+  "author": "XPACEGEMS LLC (https://mnemosyne-os.io)",
+  "homepage": "https://mnemosyne-os.io",
+  "_repository": "Left out until the public repository's name and organisation are decided (doc 203 §8).",
+  "type": "module",
+  "_exports": "Source, deliberately, like the other workspace packages: every consumer compiles TypeScript already (vite for the app, esbuild for the film pipeline and the Hugging Face demo). `./*` keeps one module per door, so a consumer that needs the point cloud does not pull three.js, and the app's lazy chunks stay as they were.",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts"
+  },
+  "files": [
+    "src",
+    "!src/**/*.test.ts",
+    "examples",
+    "README.md",
+    "LICENSE",
+    "CONTRIBUTING.md"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "example": "esbuild examples/basic/main.ts --bundle --format=iife --target=es2022 --outfile=examples/basic/example.js"
+  },
+  "peerDependencies": {
+    "three": "^0.184.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/three": "^0.184.1",
+    "esbuild": "^0.28.2",
+    "three": "^0.184.0",
+    "typescript": "^5.5.3",
+    "vitest": "^3.2.7"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

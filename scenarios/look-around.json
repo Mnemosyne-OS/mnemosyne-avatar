@@ -1,0 +1,20 @@
+{
+  "total": 12,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "shots": [
+    { "shape": "brain", "at": 0, "until": 3 },
+    { "shape": "woman", "at": 3, "until": 12, "fadeIn": 0.8 }
+  ],
+  "look": [
+    { "at": 4, "x": 0.6, "y": 0.1 },
+    { "at": 7, "x": -0.3, "y": 0.4 },
+    { "at": 9, "x": 0, "y": 0 }
+  ],
+  "moves": [
+    { "at": 5.5, "id": "curious" },
+    { "at": 8, "id": "smile" },
+    { "at": 10.5, "id": "wink" }
+  ]
+}

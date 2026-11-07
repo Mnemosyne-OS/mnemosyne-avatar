@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mnemosyne Avatar, basic example</title>
+  <style>
+    :root { --ground: #0d0b16; --text: #d9d2ff; --muted: #8f8bb8; }
+    html, body { margin: 0; height: 100%; background: var(--ground); color: var(--text); font: 15px/1.4 system-ui, sans-serif; }
+    #avatar { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+    #bar { position: fixed; left: 16px; bottom: 16px; right: 16px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    button { font: inherit; color: var(--text); background: transparent; border: 1px solid var(--muted); border-radius: 6px; padding: 6px 12px; cursor: pointer; }
+    a { color: var(--text); }
+    #credit { margin-left: auto; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <canvas id="avatar"></canvas>
+  <div id="bar">
+    <button id="talk" type="button">Talk for 3 seconds</button>
+    <span id="status">Loading the face…</span>
+    <!-- The credit the licence asks for, visible on screen. -->
+    <span id="credit">Avatar by <a href="https://mnemosyne-os.io">Mnemosyne OS</a></span>
+  </div>
+  <script src="./example.js"></script>
+</body>
+</html>
