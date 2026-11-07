@@ -15,24 +15,25 @@ Avatar by [Mnemosyne OS](https://mnemosyne-os.io).
 
 ## Almost human, on purpose
 
-For the first three seconds of the film, Irina does not blink and her eyes
-do not move. Only her mouth speaks. Then she says the
-same line again, with the same sound, on her living face.
+Irina is the face of Mnemosyne OS. For the first three seconds of the film,
+she does not blink and her eyes do not move. Only her mouth speaks. Then she
+says the same line again, with the same sound, on her living face.
 
 That shiver is the uncanny valley. A face is the blink, the glance, the half
 second before a smile. This engine draws all of them, and it can switch them
 off for three seconds to prove it.
 
 The film is 38 seconds long. This repository's `film` command line made it
-from a `film.json`, frame by frame, on one laptop.
+frame by frame, on one laptop. Its `film.json` and its voice takes are in
+[film/examples/almost-human](film/examples/almost-human), ready to render.
 
 ## One engine, every face
 
 ![The people, animals and robots of the gallery, all drawn by the same engine](docs/gallery.jpg)
 
-The same engine draws a brain, seven people, five animals, four robots, a
-butterfly, a skull, a lion, and a particle orb for a voice button. The
-robots are drawn in code. The other faces come from a density map.
+Twelve faces come from photos turned into density maps: seven people and
+five animals. Four robots are drawn in code, and so are a brain, a
+butterfly, a skull, a lion and a particle orb for a voice button.
 
 ## What it does
 
@@ -69,30 +70,41 @@ recent Chrome or Edge with WebGPU.
 lines, the expressions and the gaze over time. The voice takes come from
 any voice engine you like.
 
+The opening of Almost Human, cut from its `film.json`:
+
 ```json
 {
-  "shots": [{ "id": "irina", "shape": "woman", "at": 0, "until": 11, "formed": true }],
-  "still": [{ "at": 0, "end": 2.66, "shape": "woman" }],
-  "lines": [{ "id": "almost", "at": 0.35, "end": 2.3, "text": "Hi. I'm almost human.", "shape": "woman" }],
-  "moves": [{ "at": 2.7, "id": "smile", "shape": "woman" }]
+  "total": 37.796,
+  "shots": [{ "shape": "woman", "at": 0, "until": 11, "formed": true }],
+  "still": [{ "at": 0, "end": 2.664, "shape": "woman" }],
+  "lines": [{ "id": "almost-dead", "at": 0.35, "end": 2.314, "text": "Hi. I'm almost human.", "shape": "woman" }],
+  "cues": [{ "id": "almost-dead", "at": 0.35 }],
+  "moves": [{ "at": 2.714, "id": "smile", "shape": "woman" }]
 }
 ```
 
 `still` freezes the face inside its window. `formed` brings a face in whole,
-eyes open. A title can slide to the centre with `moveTo`. Every key is in
+eyes open. A cue lays the take `voice/en/trim/<id>.wav` at its time, and
+the `voice` command turns the takes into the mouth's moves. A title can
+slide to the centre with `moveTo`. Every key is in
 [film/README.md](film/README.md).
+
+Render the whole film:
 
 ```bash
 npm install
 npm install playwright && npx playwright install chromium
 npm run film -- doctor
-npm run film -- probe film/examples/parade 4,12,46
-npm run film -- render film/examples/parade
+npm run film -- voice film/examples/almost-human
+npm run film -- render film/examples/almost-human
+npm run film -- score film/examples/almost-human
+npm run film -- audio film/examples/almost-human
+npm run film -- mux film/examples/almost-human --name almost-human
 ```
 
-`film/examples/parade` is ready to render: the brain, every face of the
-gallery cut into the next, and one ball of light at the end. It needs ffmpeg
-with libx264 on your PATH.
+It needs ffmpeg with libx264 on your PATH. `film/examples/parade` is a
+second example, without voices: the brain, every face of the gallery cut
+into the next, and one ball of light at the end.
 
 With Mnemosyne OS installed, its MCP server makes the voice takes with
 `mnemosyne_voice_speak`.
@@ -128,6 +140,7 @@ const scene = createBrainScene(canvas, {
     engines: ['#56b6a9', '#e5b567', '#e88a95', '#7bc96f', '#b58ff7'] },
   width: innerWidth, height: innerHeight, pixelRatio: devicePixelRatio,
 });
+if (!scene) throw new Error('This browser has no WebGL');
 const face = createFaceAnimator();
 face.wake(FORM_SECONDS);
 const view = SHAPE_VIEWS.woman.front;
@@ -150,8 +163,8 @@ function frame() {
 requestAnimationFrame(frame);
 ```
 
-`createBrainScene` returns `null` when the browser has no WebGL. Check it
-before you draw.
+`createBrainScene` returns `null` when the browser has no WebGL, so the
+snippet checks it before it draws.
 
 Call `face.express('wink')` to play an expression. `lookGoal` is where the
 pointer is, from -1 to 1 on each axis, y up. `voice` is the loudness of her

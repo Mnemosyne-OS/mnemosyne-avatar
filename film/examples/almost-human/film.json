@@ -1,0 +1,483 @@
+{
+  "version": 2,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "total": 37.796,
+  "seed": 11,
+  "lang": "en",
+  "trueColor": false,
+  "arcs": true,
+  "colors": {
+    "ground": "#0e0f13",
+    "base": "#8592b0",
+    "glow": "#cfe8ea",
+    "engines": [
+      "#56b6a9",
+      "#e5b567",
+      "#e88a95",
+      "#7bc96f",
+      "#b58ff7"
+    ]
+  },
+  "gestures": false,
+  "wake": false,
+  "subtitles": true,
+  "allowMoves": [
+    "nod",
+    "emphasis",
+    "browRaiseOne",
+    "browRaise",
+    "glance",
+    "curious",
+    "listen",
+    "lookAround",
+    "squint",
+    "smirk",
+    "smile",
+    "wink",
+    "tender",
+    "ideaComes",
+    "surprise",
+    "joy",
+    "amused",
+    "sigh",
+    "ponder",
+    "relief",
+    "skeptical",
+    "awe",
+    "shyGlance",
+    "lookUpLeft",
+    "lookUpRight",
+    "thinkUpLeft",
+    "thinkUpRight",
+    "earsPerk"
+  ],
+  "shots": [
+    {
+      "id": "woman",
+      "shape": "woman",
+      "at": 0,
+      "until": 11.0,
+      "fadeIn": 0.12,
+      "fadeOut": 0.12,
+      "formed": true
+    },
+    {
+      "id": "amara",
+      "shape": "amara",
+      "at": 11.0,
+      "until": 12.0,
+      "fadeIn": 0.12,
+      "fadeOut": 0.12,
+      "formed": true
+    },
+    {
+      "id": "mei",
+      "shape": "mei",
+      "at": 12.0,
+      "until": 13.0,
+      "fadeIn": 0.12,
+      "fadeOut": 0.12,
+      "formed": true
+    },
+    {
+      "id": "kofi",
+      "shape": "kofi",
+      "at": 13.0,
+      "until": 14.0,
+      "fadeIn": 0.12,
+      "fadeOut": 0.12,
+      "formed": true
+    },
+    {
+      "id": "kenji",
+      "shape": "kenji",
+      "at": 14.0,
+      "until": 15.0,
+      "fadeIn": 0.12,
+      "fadeOut": 0.12,
+      "formed": true
+    },
+    {
+      "id": "kitten",
+      "shape": "kitten",
+      "at": 15.0,
+      "until": 16.0,
+      "fadeIn": 0.12,
+      "fadeOut": 0.12,
+      "formed": true
+    },
+    {
+      "id": "labrador",
+      "shape": "labrador",
+      "at": 16.0,
+      "until": 17.0,
+      "fadeIn": 0.12,
+      "fadeOut": 0.12,
+      "formed": true
+    },
+    {
+      "id": "leo",
+      "shape": "leo",
+      "at": 17.0,
+      "until": 18.0,
+      "fadeIn": 0.12,
+      "fadeOut": 0.12,
+      "formed": true
+    },
+    {
+      "id": "robot-rouage",
+      "shape": "robot-rouage",
+      "at": 18.0,
+      "until": 18.75,
+      "fadeIn": 0.12,
+      "fadeOut": 0.12,
+      "formed": true
+    },
+    {
+      "id": "robot-pixel",
+      "shape": "robot-pixel",
+      "at": 18.75,
+      "until": 19.5,
+      "fadeIn": 0.12,
+      "fadeOut": 0.12,
+      "formed": true
+    },
+    {
+      "id": "robot-vapeur",
+      "shape": "robot-vapeur",
+      "at": 19.5,
+      "until": 20.25,
+      "fadeIn": 0.12,
+      "fadeOut": 0.12,
+      "formed": true
+    },
+    {
+      "id": "robot-boulon",
+      "shape": "robot-boulon",
+      "at": 20.25,
+      "until": 24.404,
+      "fadeIn": 0.12,
+      "fadeOut": 0.12,
+      "formed": true
+    },
+    {
+      "id": "woman-close",
+      "shape": "woman",
+      "at": 24.404,
+      "until": 37.796,
+      "fadeIn": 0.12,
+      "fadeOut": 0.12,
+      "formed": true
+    }
+  ],
+  "still": [
+    {
+      "at": 0,
+      "end": 2.664,
+      "shape": "woman"
+    }
+  ],
+  "lines": [
+    {
+      "id": "almost-dead",
+      "at": 0.35,
+      "end": 2.314,
+      "text": "Hi. I'm almost human.",
+      "shape": "woman"
+    },
+    {
+      "id": "almost-alive",
+      "at": 2.964,
+      "end": 4.928,
+      "text": "Hi. I'm almost human.",
+      "shape": "woman"
+    },
+    {
+      "id": "better",
+      "at": 5.178,
+      "end": 5.627,
+      "text": "Better?",
+      "shape": "woman"
+    },
+    {
+      "id": "valley",
+      "at": 5.977,
+      "end": 10.136,
+      "text": "That shiver, a second ago? It has a name. The uncanny valley.",
+      "shape": "woman"
+    },
+    {
+      "id": "skin",
+      "at": 11.15,
+      "end": 16.47,
+      "text": "A face isn't skin. It's the blink. The glance. The half second before a smile.",
+      "shape": "voiceover"
+    },
+    {
+      "id": "robot",
+      "at": 18.1,
+      "end": 19.551,
+      "text": "Even a robot can cross it.",
+      "shape": "voiceover"
+    },
+    {
+      "id": "helmet",
+      "at": 20.55,
+      "end": 23.804,
+      "text": "I am... your assistant.",
+      "shape": "robot-boulon"
+    },
+    {
+      "id": "mask",
+      "at": 24.704,
+      "end": 29.719,
+      "text": "I'm not a mask. I'm a conversation. I live on your machine, and I remember with you.",
+      "shape": "woman"
+    },
+    {
+      "id": "yours",
+      "at": 30.119,
+      "end": 30.996,
+      "text": "Make yours.",
+      "shape": "woman"
+    }
+  ],
+  "cues": [
+    {
+      "id": "almost-dead",
+      "at": 0.35
+    },
+    {
+      "id": "almost-alive",
+      "at": 2.964
+    },
+    {
+      "id": "better",
+      "at": 5.178
+    },
+    {
+      "id": "valley",
+      "at": 5.977
+    },
+    {
+      "id": "skin",
+      "at": 11.15
+    },
+    {
+      "id": "robot",
+      "at": 18.1
+    },
+    {
+      "id": "helmet",
+      "at": 20.55
+    },
+    {
+      "id": "mask",
+      "at": 24.704
+    },
+    {
+      "id": "yours",
+      "at": 30.119
+    }
+  ],
+  "moves": [
+    {
+      "at": 2.714,
+      "id": "smile",
+      "shape": "woman"
+    },
+    {
+      "at": 5.327,
+      "id": "browRaise",
+      "shape": "woman"
+    },
+    {
+      "at": 5.977,
+      "id": "browRaiseOne",
+      "shape": "woman"
+    },
+    {
+      "at": 11.08,
+      "id": "listen",
+      "shape": "amara"
+    },
+    {
+      "at": 12.08,
+      "id": "shyGlance",
+      "shape": "mei"
+    },
+    {
+      "at": 13.08,
+      "id": "joy",
+      "shape": "kofi"
+    },
+    {
+      "at": 15.08,
+      "id": "earsPerk",
+      "shape": "kitten"
+    },
+    {
+      "at": 16.08,
+      "id": "joy",
+      "shape": "labrador"
+    },
+    {
+      "at": 17.08,
+      "id": "browRaise",
+      "shape": "leo"
+    },
+    {
+      "at": 23.854,
+      "id": "nod",
+      "shape": "robot-boulon"
+    },
+    {
+      "at": 24.504,
+      "id": "tender",
+      "shape": "woman"
+    },
+    {
+      "at": 31.046,
+      "id": "smile",
+      "shape": "woman"
+    }
+  ],
+  "look": [
+    {
+      "at": 0,
+      "x": 0,
+      "y": 0,
+      "sway": 0,
+      "shape": "woman"
+    },
+    {
+      "at": 2.664,
+      "x": 0.12,
+      "shape": "woman"
+    },
+    {
+      "at": 4.928,
+      "x": -0.1,
+      "shape": "woman"
+    },
+    {
+      "at": 5.977,
+      "x": 0.25,
+      "shape": "woman"
+    },
+    {
+      "at": 8.736,
+      "x": 0,
+      "shape": "woman"
+    },
+    {
+      "at": 11.0,
+      "x": 0.3,
+      "shape": "amara"
+    },
+    {
+      "at": 12.0,
+      "x": -0.3,
+      "shape": "mei"
+    },
+    {
+      "at": 13.0,
+      "x": 0.2,
+      "shape": "kofi"
+    },
+    {
+      "at": 14.0,
+      "x": -0.75,
+      "sway": 0,
+      "shape": "kenji"
+    },
+    {
+      "at": 14.45,
+      "x": 0.75,
+      "sway": 0,
+      "shape": "kenji"
+    },
+    {
+      "at": 15.0,
+      "x": 0.25,
+      "shape": "kitten"
+    },
+    {
+      "at": 16.0,
+      "x": -0.25,
+      "shape": "labrador"
+    },
+    {
+      "at": 17.0,
+      "x": 0.2,
+      "shape": "leo"
+    },
+    {
+      "at": 18.0,
+      "x": 0.3,
+      "shape": "robot-rouage"
+    },
+    {
+      "at": 18.75,
+      "x": -0.3,
+      "shape": "robot-pixel"
+    },
+    {
+      "at": 19.5,
+      "x": 0.3,
+      "shape": "robot-vapeur"
+    },
+    {
+      "at": 20.25,
+      "x": 0,
+      "y": 0,
+      "sway": 0,
+      "shape": "robot-boulon"
+    },
+    {
+      "at": 24.404,
+      "x": 0.15,
+      "shape": "woman"
+    },
+    {
+      "at": 27.719,
+      "x": 0,
+      "shape": "woman"
+    }
+  ],
+  "overlays": [
+    {
+      "kind": "badge",
+      "text": "UNCANNY VALLEY",
+      "at": 8.886,
+      "end": 11.036,
+      "y": 0.05
+    },
+    {
+      "kind": "title",
+      "text": "MNEMOSYNE AVATAR",
+      "sub": "by Mnemosyne OS  ·  mnemosyne-os.io",
+      "note": "Available on Hugging Face & GitHub",
+      "noteAt": 34.396,
+      "at": 31.096,
+      "end": 38.796,
+      "y": 0.07,
+      "moveTo": {
+        "y": 0.5,
+        "at": 33.796,
+        "dur": 0.8
+      }
+    }
+  ],
+  "score": {
+    "bpm": 120,
+    "heart": 0
+  },
+  "ending": {
+    "kind": "implode",
+    "at": 32.296,
+    "dur": 1.8
+  }
+}
