@@ -6,7 +6,7 @@ speaks. It runs in the browser, on three.js.
 ![For three seconds her face does not move, only her mouth. Then the same line, on her living face.](docs/almost-human.gif)
 
 **[Watch the film](https://www.youtube.com/watch?v=AnN1g1owWtg)** ·
-**[Talk to it on Hugging Face](https://huggingface.co/spaces/Mnemosyne-OS/mnemosyne-os)** ·
+**[Talk to it on Hugging Face](https://huggingface.co/spaces/Mnemosyne-OS/mnemosyne-avatar)** ·
 **[Mnemosyne OS](https://mnemosyne-os.io)**
 
 <!-- The Short for now; the 16:9 film replaces it once posted. -->
@@ -53,7 +53,7 @@ butterfly, a skull, a lion and a particle orb for a voice button.
 
 ## Talk to it
 
-The [Hugging Face Space](https://huggingface.co/spaces/Mnemosyne-OS/mnemosyne-os)
+The [Hugging Face Space](https://huggingface.co/spaces/Mnemosyne-OS/mnemosyne-avatar)
 runs this avatar with three models, all in your browser, on your own
 graphics card:
 
