@@ -30,7 +30,7 @@ npm run example
 python -m http.server --directory examples/basic
 ```
 
-<!-- DRAFT: contributor terms pending review by counsel (doc 203 lot 0). -->
+<!-- DRAFT: contributor terms pending review by counsel. -->
 
 The repository is under the Business Source License 1.1. By opening a pull
 request, you agree that your contribution is published under the same
@@ -44,7 +44,7 @@ far, and how long it takes.
 
 ```ts
 // src/faceAnimator.ts, inside EXPRESSIONS
-relief: rnd => {
+contentment: rnd => {
   const a = pick(rnd, 0.6, 0.9);
   return {
     // How far each feature goes at the top, from -1 to 1.
@@ -85,13 +85,13 @@ const quiet: FaceInput = {
   voice: 0, spectrum: null, lookGoal: { x: 0, y: 0 }, motion: true, gestures: false,
 };
 
-describe('relief', () => {
+describe('contentment', () => {
   it('lifts the inner brows and the corners of the mouth, then lets go', () => {
     let s = 3;
     const rnd = () => { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; };
     const face = createFaceAnimator(rnd);
     for (let f = 0; f < 30; f++) face.step(1 / 60, quiet);
-    face.express('relief');
+    face.express('contentment');
     let top = 0;
     for (let f = 0; f < 120; f++) top = Math.max(top, face.step(1 / 60, quiet).weights[FS.browInnerUp] ?? 0);
     expect(top).toBeGreaterThan(0.15);
@@ -108,8 +108,9 @@ the app's menus.
 
 A scenario is a short scene written in JSON, with no code. It says which
 face appears, where she looks, and which expressions she plays, second by
-second. Maintainers render scenarios into videos with the film pipeline of
-Mnemosyne OS.
+second. The `film` command line of this repository renders it: copy it as
+`film.json` into a folder, then `npm run film -- probe <folder> 5` shows a
+still and `npm run film -- render <folder>` makes the video.
 
 Add it as `scenarios/<your-scenario>.json`:
 

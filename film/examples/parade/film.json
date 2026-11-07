@@ -1,0 +1,532 @@
+{
+  "version": 2,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "total": 50.8,
+  "seed": 7,
+  "trueColor": false,
+  "arcs": true,
+  "colors": {
+    "ground": "#0e0f13",
+    "base": "#8592b0",
+    "glow": "#cfe8ea",
+    "engines": [
+      "#56b6a9",
+      "#e5b567",
+      "#e88a95",
+      "#7bc96f",
+      "#b58ff7"
+    ]
+  },
+  "gestures": false,
+  "allowMoves": [
+    "nod",
+    "emphasis",
+    "browRaiseOne",
+    "browRaise",
+    "glance",
+    "curious",
+    "listen",
+    "lookAround",
+    "squint",
+    "smirk",
+    "smile",
+    "wink",
+    "tender",
+    "ideaComes",
+    "surprise",
+    "joy",
+    "amused",
+    "sigh",
+    "ponder",
+    "relief",
+    "skeptical",
+    "awe",
+    "shyGlance",
+    "lookUpLeft",
+    "lookUpRight",
+    "thinkUpLeft",
+    "thinkUpRight",
+    "earsPerk"
+  ],
+  "shots": [
+    {
+      "id": "brain",
+      "shape": "brain",
+      "at": 0,
+      "until": 3.0,
+      "fadeIn": 0.12,
+      "fadeOut": 0.3
+    },
+    {
+      "id": "woman",
+      "shape": "woman",
+      "at": 2.8,
+      "until": 9.2,
+      "fadeIn": 0.25,
+      "fadeOut": 0.3
+    },
+    {
+      "id": "claire",
+      "shape": "claire",
+      "at": 9.0,
+      "until": 11.7,
+      "fadeIn": 0.3,
+      "fadeOut": 0.3,
+      "formed": true
+    },
+    {
+      "id": "amara",
+      "shape": "amara",
+      "at": 11.4,
+      "until": 14.1,
+      "fadeIn": 0.3,
+      "fadeOut": 0.3,
+      "formed": true
+    },
+    {
+      "id": "mei",
+      "shape": "mei",
+      "at": 13.8,
+      "until": 16.5,
+      "fadeIn": 0.3,
+      "fadeOut": 0.3,
+      "formed": true
+    },
+    {
+      "id": "man",
+      "shape": "man",
+      "at": 16.2,
+      "until": 18.9,
+      "fadeIn": 0.3,
+      "fadeOut": 0.3,
+      "formed": true
+    },
+    {
+      "id": "kofi",
+      "shape": "kofi",
+      "at": 18.6,
+      "until": 21.3,
+      "fadeIn": 0.3,
+      "fadeOut": 0.3,
+      "formed": true
+    },
+    {
+      "id": "kenji",
+      "shape": "kenji",
+      "at": 21.0,
+      "until": 23.7,
+      "fadeIn": 0.3,
+      "fadeOut": 0.3,
+      "formed": true
+    },
+    {
+      "id": "kitten",
+      "shape": "kitten",
+      "at": 23.4,
+      "until": 26.1,
+      "fadeIn": 0.3,
+      "fadeOut": 0.3,
+      "formed": true
+    },
+    {
+      "id": "shepherd",
+      "shape": "shepherd",
+      "at": 25.8,
+      "until": 28.5,
+      "fadeIn": 0.3,
+      "fadeOut": 0.3,
+      "formed": true
+    },
+    {
+      "id": "labrador",
+      "shape": "labrador",
+      "at": 28.2,
+      "until": 30.9,
+      "fadeIn": 0.3,
+      "fadeOut": 0.3,
+      "formed": true
+    },
+    {
+      "id": "bear",
+      "shape": "bear",
+      "at": 30.6,
+      "until": 33.3,
+      "fadeIn": 0.3,
+      "fadeOut": 0.3,
+      "formed": true
+    },
+    {
+      "id": "leo",
+      "shape": "leo",
+      "at": 33.0,
+      "until": 35.7,
+      "fadeIn": 0.3,
+      "fadeOut": 0.3,
+      "formed": true
+    },
+    {
+      "id": "robot-rouage",
+      "shape": "robot-rouage",
+      "at": 35.4,
+      "until": 37.9,
+      "fadeIn": 0.3,
+      "fadeOut": 0.3,
+      "formed": true
+    },
+    {
+      "id": "robot-boulon",
+      "shape": "robot-boulon",
+      "at": 37.6,
+      "until": 40.1,
+      "fadeIn": 0.3,
+      "fadeOut": 0.3,
+      "formed": true
+    },
+    {
+      "id": "robot-pixel",
+      "shape": "robot-pixel",
+      "at": 39.8,
+      "until": 42.3,
+      "fadeIn": 0.3,
+      "fadeOut": 0.3,
+      "formed": true
+    },
+    {
+      "id": "robot-vapeur",
+      "shape": "robot-vapeur",
+      "at": 42.0,
+      "until": 44.5,
+      "fadeIn": 0.3,
+      "fadeOut": 0.3,
+      "formed": true
+    },
+    {
+      "id": "woman-close",
+      "shape": "woman",
+      "at": 44.2,
+      "until": 50.2,
+      "fadeIn": 0.3,
+      "fadeOut": 0.3,
+      "formed": true
+    }
+  ],
+  "moves": [
+    {
+      "at": 7.6,
+      "id": "smile",
+      "shape": "woman"
+    },
+    {
+      "at": 9.5,
+      "id": "smile",
+      "shape": "claire"
+    },
+    {
+      "at": 11.9,
+      "id": "curious",
+      "shape": "amara"
+    },
+    {
+      "at": 14.3,
+      "id": "shyGlance",
+      "shape": "mei"
+    },
+    {
+      "at": 16.7,
+      "id": "nod",
+      "shape": "man"
+    },
+    {
+      "at": 19.1,
+      "id": "joy",
+      "shape": "kofi"
+    },
+    {
+      "at": 21.5,
+      "id": "glance",
+      "shape": "kenji"
+    },
+    {
+      "at": 23.9,
+      "id": "earsPerk",
+      "shape": "kitten"
+    },
+    {
+      "at": 26.3,
+      "id": "curious",
+      "shape": "shepherd"
+    },
+    {
+      "at": 28.7,
+      "id": "joy",
+      "shape": "labrador"
+    },
+    {
+      "at": 31.1,
+      "id": "ponder",
+      "shape": "bear"
+    },
+    {
+      "at": 33.5,
+      "id": "browRaise",
+      "shape": "leo"
+    },
+    {
+      "at": 35.9,
+      "id": "lookAround",
+      "shape": "robot-rouage"
+    },
+    {
+      "at": 38.1,
+      "id": "browRaise",
+      "shape": "robot-boulon"
+    },
+    {
+      "at": 40.3,
+      "id": "smile",
+      "shape": "robot-pixel"
+    },
+    {
+      "at": 42.5,
+      "id": "ideaComes",
+      "shape": "robot-vapeur"
+    },
+    {
+      "at": 44.8,
+      "id": "smile",
+      "shape": "woman"
+    },
+    {
+      "at": 46.8,
+      "id": "nod",
+      "shape": "woman"
+    }
+  ],
+  "look": [
+    {
+      "at": 2.8,
+      "x": 0,
+      "shape": "woman"
+    },
+    {
+      "at": 7.9,
+      "x": -0.35,
+      "shape": "woman"
+    },
+    {
+      "at": 8.6,
+      "x": 0.25,
+      "shape": "woman"
+    },
+    {
+      "at": 9.0,
+      "x": -0.3,
+      "shape": "claire"
+    },
+    {
+      "at": 10.32,
+      "x": 0.18,
+      "shape": "claire"
+    },
+    {
+      "at": 11.4,
+      "x": 0.3,
+      "shape": "amara"
+    },
+    {
+      "at": 12.72,
+      "x": -0.18,
+      "shape": "amara"
+    },
+    {
+      "at": 13.8,
+      "x": -0.3,
+      "shape": "mei"
+    },
+    {
+      "at": 15.12,
+      "x": 0.18,
+      "shape": "mei"
+    },
+    {
+      "at": 16.2,
+      "x": 0.3,
+      "shape": "man"
+    },
+    {
+      "at": 17.52,
+      "x": -0.18,
+      "shape": "man"
+    },
+    {
+      "at": 18.6,
+      "x": -0.3,
+      "shape": "kofi"
+    },
+    {
+      "at": 19.92,
+      "x": 0.18,
+      "shape": "kofi"
+    },
+    {
+      "at": 21.0,
+      "x": 0.3,
+      "shape": "kenji"
+    },
+    {
+      "at": 22.32,
+      "x": -0.18,
+      "shape": "kenji"
+    },
+    {
+      "at": 23.4,
+      "x": -0.3,
+      "shape": "kitten"
+    },
+    {
+      "at": 24.72,
+      "x": 0.18,
+      "shape": "kitten"
+    },
+    {
+      "at": 25.8,
+      "x": 0.3,
+      "shape": "shepherd"
+    },
+    {
+      "at": 27.12,
+      "x": -0.18,
+      "shape": "shepherd"
+    },
+    {
+      "at": 28.2,
+      "x": -0.3,
+      "shape": "labrador"
+    },
+    {
+      "at": 29.52,
+      "x": 0.18,
+      "shape": "labrador"
+    },
+    {
+      "at": 30.6,
+      "x": 0.3,
+      "shape": "bear"
+    },
+    {
+      "at": 31.92,
+      "x": -0.18,
+      "shape": "bear"
+    },
+    {
+      "at": 33.0,
+      "x": -0.3,
+      "shape": "leo"
+    },
+    {
+      "at": 34.32,
+      "x": 0.18,
+      "shape": "leo"
+    },
+    {
+      "at": 35.4,
+      "x": 0.3,
+      "shape": "robot-rouage"
+    },
+    {
+      "at": 36.61,
+      "x": -0.18,
+      "shape": "robot-rouage"
+    },
+    {
+      "at": 37.6,
+      "x": -0.3,
+      "shape": "robot-boulon"
+    },
+    {
+      "at": 38.81,
+      "x": 0.18,
+      "shape": "robot-boulon"
+    },
+    {
+      "at": 39.8,
+      "x": 0.3,
+      "shape": "robot-pixel"
+    },
+    {
+      "at": 41.01,
+      "x": -0.18,
+      "shape": "robot-pixel"
+    },
+    {
+      "at": 42.0,
+      "x": -0.3,
+      "shape": "robot-vapeur"
+    },
+    {
+      "at": 43.21,
+      "x": 0.18,
+      "shape": "robot-vapeur"
+    },
+    {
+      "at": 44.2,
+      "x": 0.2,
+      "shape": "woman"
+    },
+    {
+      "at": 45.8,
+      "x": 0,
+      "shape": "woman"
+    }
+  ],
+  "overlays": [
+    {
+      "kind": "title",
+      "text": "MNEMOSYNE AVATAR",
+      "sub": "A face made of particles",
+      "at": 0.3,
+      "end": 2.6
+    },
+    {
+      "kind": "badge",
+      "text": "People",
+      "at": 9.0,
+      "end": 23.2,
+      "y": 0.92
+    },
+    {
+      "kind": "badge",
+      "text": "Animals",
+      "at": 23.4,
+      "end": 35.199999999999996,
+      "y": 0.92
+    },
+    {
+      "kind": "badge",
+      "text": "Robots",
+      "at": 35.4,
+      "end": 44.0,
+      "y": 0.92
+    },
+    {
+      "kind": "title",
+      "text": "MNEMOSYNE AVATAR",
+      "sub": "by Mnemosyne OS  \u00b7  mnemosyne-os.io",
+      "at": 45.0,
+      "end": 49.6,
+      "y": 0.86
+    }
+  ],
+  "score": {
+    "bpm": 102,
+    "heart": 66
+  },
+  "ending": {
+    "kind": "implode",
+    "at": 48.4,
+    "dur": 1.8
+  },
+  "wake": false
+}

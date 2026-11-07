@@ -1,3 +1,9 @@
 node_modules/
 # Built by `npm run example`.
 examples/basic/example.js
+# The film engine bundle, rebuilt from src by `film/bin/avatar-film.mjs bundle`.
+film/.cache/
+# What a rendered example leaves next to its film.json.
+film/examples/*/out/
+film/examples/*/music.wav
+film/examples/*/voice.json

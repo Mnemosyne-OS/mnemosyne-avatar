@@ -2,7 +2,7 @@
   "name": "@mnemosyne_os/avatar",
   "version": "0.1.0",
   "private": true,
-  "_private": "Kept private until the npm publication (doc 203 lot 3) is decided: a private package cannot be published by mistake. Remove this flag, and add publishConfig.access=public, on that day only.",
+  "_private": "Kept private until the npm publication is decided: a private package cannot be published by mistake. Remove this flag, and add publishConfig.access=public, on that day only.",
   "description": "Mnemosyne Avatar: a face made of particles that looks at you, listens, speaks and reacts. The particle scene, the faces, the gaze and its micro-reactions, the robots and the particle orb, on three.js.",
   "keywords": [
     "avatar",
@@ -17,7 +17,7 @@
   "license": "BUSL-1.1",
   "author": "XPACEGEMS LLC (https://mnemosyne-os.io)",
   "homepage": "https://mnemosyne-os.io",
-  "_repository": "Left out until the public repository's name and organisation are decided (doc 203 §8).",
+  "_repository": "Left out until the public repository is live: github.com/Mnemosyne-OS/mnemosyne-avatar.",
   "type": "module",
   "_exports": "Source, deliberately, like the other workspace packages: every consumer compiles TypeScript already (vite for the app, esbuild for the film pipeline and the Hugging Face demo). `./*` keeps one module per door, so a consumer that needs the point cloud does not pull three.js, and the app's lazy chunks stay as they were.",
   "main": "./src/index.ts",
@@ -30,6 +30,9 @@
     "src",
     "!src/**/*.test.ts",
     "examples",
+    "film",
+    "!film/.cache",
+    "!film/test",
     "README.md",
     "LICENSE",
     "CONTRIBUTING.md"
@@ -37,8 +40,11 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "example": "esbuild examples/basic/main.ts --bundle --format=iife --target=es2022 --outfile=examples/basic/example.js"
+    "example": "esbuild examples/basic/main.ts --bundle --format=iife --target=es2022 --outfile=examples/basic/example.js",
+    "film": "node film/bin/avatar-film.mjs",
+    "test:film": "node --test film/test/film.test.mjs"
   },
+  "_film": "The film CLI (film/README.md) needs Playwright and a Chromium for its renders: `npm install playwright` then `npx playwright install chromium`, and an ffmpeg with libx264 on the PATH. Not declared as dependencies: installing the engine must not download a browser for people who never render a film.",
   "peerDependencies": {
     "three": "^0.184.0"
   },
