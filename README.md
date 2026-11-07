@@ -9,7 +9,7 @@ speaks. It runs in the browser, on three.js.
 **[Talk to it on Hugging Face](https://huggingface.co/spaces/Mnemosyne-OS/mnemosyne-avatar)** ·
 **[Mnemosyne OS](https://mnemosyne-os.io)**
 
-<!-- The Short for now; the 16:9 film replaces it once posted. -->
+<!-- The film is the Almost Human Short. -->
 
 Avatar by [Mnemosyne OS](https://mnemosyne-os.io).
 
