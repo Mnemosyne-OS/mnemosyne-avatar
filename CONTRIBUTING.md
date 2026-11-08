@@ -30,8 +30,6 @@ npm run example
 python -m http.server --directory examples/basic
 ```
 
-<!-- DRAFT: contributor terms pending review by counsel. -->
-
 The repository is under the Business Source License 1.1. By opening a pull
 request, you agree that your contribution is published under the same
 license.
