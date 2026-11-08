@@ -1,7 +1,3 @@
-[DRAFT] NOT IN FORCE. This file is a draft pending review by counsel.
-Every value marked [DRAFT] below may change. This banner and every [DRAFT]
-mark are removed before the repository is published.
-
 Business Source License 1.1
 
 Parameters
@@ -12,7 +8,7 @@ Licensed Work:        Mnemosyne Avatar (the @mnemosyne_os/avatar package),
                       version 0.1.0 and later.
                       The Licensed Work is (c) 2026 XPACEGEMS LLC.
 
-Additional Use Grant: [DRAFT] You may make production use of the Licensed
+Additional Use Grant: You may make production use of the Licensed
                       Work, provided that both conditions below are met:
 
                       1. Revenue. You, together with all of your
@@ -41,8 +37,7 @@ Change Date:          Four years from the date the Licensed Work is
 Change License:       Apache License, Version 2.0
 
 For information about alternative licensing arrangements for the Licensed Work,
-please contact the Licensor through https://mnemosyne-os.io
-[DRAFT: a licensing contact address is to be chosen].
+please contact the Licensor through https://mnemosyne-os.io.
 
 Notice
 
