@@ -227,6 +227,4 @@ This repository is source-available under the
 - Four years after each version is published, that version becomes
   available under the Apache License 2.0.
 
-<!-- DRAFT: the license text is pending review by counsel. -->
-
 Copyright (c) 2026 XPACEGEMS LLC.
