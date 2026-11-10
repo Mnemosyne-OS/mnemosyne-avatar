@@ -116,7 +116,8 @@ describe('createMusicLife', () => {
     }
     expect(winks).toBeGreaterThan(0);
     expect(winks * 3).toBeLessThan(smiles);
-  });
+    // Eight seeds of 900 s of music: 3.5 to 4.6 s on GitHub's runners, 5.3 s once, past the 5 s default.
+  }, 20_000);
 
   it('never two moods the same in a row', () => {
     const moods = listen(600, 110, { seed: 9 }).map(f => f.mood).filter((m, i, a) => i === 0 || m !== a[i - 1]);
