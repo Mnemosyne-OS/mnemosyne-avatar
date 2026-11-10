@@ -3,9 +3,11 @@
 A face made of particles. It looks at you, blinks, breathes, listens and
 speaks. It runs in the browser, on three.js.
 
-![For three seconds her face does not move, only her mouth. Then the same line, on her living face.](docs/almost-human.gif)
+https://github.com/user-attachments/assets/8ec07023-aab0-4bc8-b1ff-1f8b4cb7d410
 
-**[Watch the film](https://www.youtube.com/watch?v=AnN1g1owWtg)** ·
+<!-- The film above plays here, with sound: for three seconds her face does not move, only her mouth. Then the same line, on her living face. -->
+
+**[▶ The film on YouTube](https://www.youtube.com/shorts/AnN1g1owWtg)** ·
 **[Talk to it on Hugging Face](https://huggingface.co/spaces/Mnemosyne-OS/mnemosyne-avatar)** ·
 **[Mnemosyne OS](https://mnemosyne-os.io)**
 
