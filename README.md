@@ -55,14 +55,18 @@ butterfly, a skull, a lion and a particle orb for a voice button.
 
 The [Hugging Face Space](https://huggingface.co/spaces/Mnemosyne-OS/mnemosyne-avatar)
 runs this avatar with three models, all in your browser, on your own
-graphics card:
+device:
 
-- Whisper base hears you while the Speak button is lit.
-- LFM3-1.7B by Liquid AI, or SmolLM3-3B by Hugging Face, answers on WebGPU.
-- Kokoro-82M speaks, and its sound moves her mouth.
+- Whisper hears you while the Speak button is lit: base on a computer,
+  tiny on a phone.
+- The brain you pick answers on WebGPU: LFM2.5-350M or LFM3-1.7B by
+  Liquid AI, or SmolLM3-3B by Hugging Face. A phone starts with LFM2.5.
+- Piper speaks, on the processor, faster than real time, and its sound
+  moves her mouth. Kokoro-82M is there too, with `?voice=kokoro`.
 
 It speaks English, French, Spanish and Brazilian Portuguese. It needs a
-recent Chrome or Edge with WebGPU.
+recent Chrome or Edge with WebGPU. Talking works best on a computer: a
+phone may close the page while the models start.
 
 ## Make a film
 
