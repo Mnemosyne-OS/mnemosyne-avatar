@@ -19,8 +19,12 @@
 (async () => {
   const q = new URLSearchParams(location.search);
   const FPS = Number(q.get('fps') || 30);
-  const film = await (await fetch('film.json')).json();
-  const voice = await fetch('voice.json').then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  // A host that is not a web server (the Mnemosyne OS app renders in a hidden
+  // window, doc 205) hands the film over through `window.FilmData`; the CLI's
+  // page server is fetched as before.
+  const handed = typeof window.FilmData === 'function' ? await window.FilmData() : null;
+  const film = handed?.film ?? await (await fetch('film.json')).json();
+  const voice = handed ? (handed.voice ?? null) : await fetch('voice.json').then((r) => (r.ok ? r.json() : null)).catch(() => null);
   const W = film.width || 1920, H = film.height || 1080;
 
   const clamp = (v, a, b) => Math.min(b, Math.max(a, v));

@@ -21,7 +21,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
-const HERE = path.dirname(fileURLToPath(import.meta.url));
+// Bundled into a CommonJS host (the Mnemosyne OS main process imports the pure
+// half of timeline/voice/audio), `import.meta.url` can be empty: the folders
+// below are then never read, and loading must not throw.
+const HERE = import.meta.url ? path.dirname(fileURLToPath(import.meta.url)) : process.cwd();
 /** This CLI's own folder (`film/`): its runtime, its engine entry, its cache. */
 export const FILM_DIR = path.join(HERE, '..');
 /** The avatar package: its `src` is the engine every film is drawn with. */
