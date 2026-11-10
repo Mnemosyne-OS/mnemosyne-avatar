@@ -1,0 +1,35 @@
+Mnemosyne Avatar
+Copyright 2026 XPACEGEMS LLC
+https://mnemosyne-os.io
+
+This product contains two kinds of material under two licenses.
+
+1. The code is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+2. The faces are licensed under the Creative Commons Attribution 4.0
+   International License (CC BY 4.0, see LICENSE-FACES). The faces are
+   these files and nothing else:
+
+     src/amaraPortrait.ts
+     src/bearPortrait.ts
+     src/clairePortrait.ts
+     src/kenjiPortrait.ts
+     src/kittenPortrait.ts
+     src/kofiPortrait.ts
+     src/labradorPortrait.ts
+     src/leoPortrait.ts
+     src/manPortrait.ts
+     src/meiPortrait.ts
+     src/shepherdPortrait.ts
+     src/womanPortrait.ts
+     docs/gallery.jpg
+     docs/almost-human.gif
+
+   Using, showing or adapting a face requires this credit, on the screen
+   where the face appears or on the "About" page of the product:
+
+     Avatar by Mnemosyne OS (https://mnemosyne-os.io)
+
+"Mnemosyne", "Mnemosyne OS" and "Mnemosyne Avatar" are names of
+XPACEGEMS LLC. Neither license grants permission to use them, except to give
+the credit above and to describe where the work comes from.

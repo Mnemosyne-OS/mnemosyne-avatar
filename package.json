@@ -14,7 +14,7 @@
     "lip-sync",
     "mnemosyne"
   ],
-  "license": "BUSL-1.1",
+  "license": "Apache-2.0 AND CC-BY-4.0",
   "author": "XPACEGEMS LLC (https://mnemosyne-os.io)",
   "homepage": "https://mnemosyne-os.io",
   "_repository": "Left out until the public repository is live: github.com/Mnemosyne-OS/mnemosyne-avatar.",
@@ -35,6 +35,8 @@
     "!film/test",
     "README.md",
     "LICENSE",
+    "LICENSE-FACES",
+    "NOTICE",
     "CONTRIBUTING.md"
   ],
   "scripts": {

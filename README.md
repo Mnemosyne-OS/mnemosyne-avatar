@@ -215,16 +215,14 @@ Mnemosyne OS, which are not public. The code they describe is all here.
 
 ## License
 
-This repository is source-available under the
-[Business Source License 1.1](LICENSE).
+Mnemosyne Avatar is open source, for personal and commercial use.
 
-- Free in production for a person or a company under 1 million US dollars
-  of annual revenue, affiliates included.
-- The condition: show the credit "Avatar by Mnemosyne OS", with a link to
+- The code is under the [Apache License 2.0](LICENSE).
+- The faces are under [CC BY 4.0](LICENSE-FACES). The [NOTICE](NOTICE) file
+  lists them: the twelve `src/*Portrait.ts` files and the two images in
+  `docs/`.
+- If you use a face, show the credit "Avatar by Mnemosyne OS", with a link to
   https://mnemosyne-os.io, on the screen where the avatar appears or on your
   "About" page.
-- Above that revenue, a commercial license is available from XPACEGEMS LLC.
-- Four years after each version is published, that version becomes
-  available under the Apache License 2.0.
 
 Copyright (c) 2026 XPACEGEMS LLC.

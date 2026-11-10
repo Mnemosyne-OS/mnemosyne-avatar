@@ -30,9 +30,10 @@ npm run example
 python -m http.server --directory examples/basic
 ```
 
-The repository is under the Business Source License 1.1. By opening a pull
-request, you agree that your contribution is published under the same
-license.
+The code is under the Apache License 2.0 and the faces under CC BY 4.0 (see
+NOTICE). By opening a pull request, you agree that your contribution is
+published under the same license as the files it changes: Apache 2.0 for
+code, CC BY 4.0 for a new face.
 
 ## 1. An expression
 
