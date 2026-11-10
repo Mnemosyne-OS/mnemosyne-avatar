@@ -1,0 +1,57 @@
+name: A new face
+description: Propose a face before you build it. A face needs a density map and a rig, and its rights must be clear.
+title: "New face: "
+labels: ["new face"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        CONTRIBUTING.md, section 4, explains what a face is made of. Open this issue before you build one: the tool that turns a picture into a density map is not in this repository yet.
+  - type: input
+    id: name
+    attributes:
+      label: Its name
+      placeholder: "e.g. Lena, Owl, Robot Tin"
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What it is
+      options:
+        - A person
+        - An animal
+        - A robot
+        - Something else
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: Where it comes from
+      options:
+        - Drawn in code, with no picture (like src/robotSpec.ts)
+        - A picture I made
+        - A picture I have the rights to
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What makes it different from the faces already there
+      description: Its character, its features, how it should move.
+    validations:
+      required: true
+  - type: textarea
+    id: picture
+    attributes:
+      label: A sketch or a reference picture
+      description: Optional. Only a picture you are allowed to share.
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: Rights
+      options:
+        - label: The face is mine to give, and it will be published under CC BY 4.0
+          required: true
+        - label: If it is a real person's face, that person gave me written consent

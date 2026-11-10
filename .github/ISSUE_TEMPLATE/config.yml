@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Ask for an expression
+    url: https://github.com/Mnemosyne-OS/mnemosyne-avatar/discussions/2
+    about: Name the expression she should learn next. The ones with the most 👍 get made first.
+  - name: Show a film or a face you made
+    url: https://github.com/Mnemosyne-OS/mnemosyne-avatar/discussions/1
+    about: Share what you made with the avatar.
